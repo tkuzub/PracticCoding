@@ -11,6 +11,18 @@ package com.practic.codewars.string;
  */
 public class JomoPipi {
     public  String antiString(String str) {
-        return "";
+        StringBuilder resultData = new StringBuilder();
+
+        for (char ch : str.toCharArray()) {
+            if (Character.isDigit(ch)) {
+                int nums = Character.getNumericValue(ch);
+                int result = 9 - nums;
+                resultData.append(result);
+            } else {
+                char resultLetter = (char) (187 - (int) ch);
+                resultData.append(resultLetter);
+            }
+        }
+        return new StringBuilder(resultData).reverse().toString();
     }
 }
