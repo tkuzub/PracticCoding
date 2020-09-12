@@ -2,7 +2,6 @@ package com.practic.adaptive.task5;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Write a program that finds all occurrences of the given substring in the string.
@@ -11,7 +10,7 @@ import java.util.Scanner;
  * The first line of input contains the original string, the second line contains the substring, the positions of which you should find. The lines consist of Latin characters only.
  *
  * Output format:
- * The list String with the indices (indexing starts with zero) of the occurrences of the given substring in the string, separated by a space, or number -1 when the substring is absent.
+ * The return int[] with the indices (indexing starts with zero) of the occurrences of the given substring in the string, separated by a space, or number -1 when the substring is absent.
  *
  * Sample Input 1:
  *
