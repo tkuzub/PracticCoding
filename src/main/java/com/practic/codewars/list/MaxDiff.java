@@ -18,7 +18,6 @@ import java.util.IntSummaryStatistics;
 public class MaxDiff {
 
     public int maxDiff(int[] lst) {
-
         IntSummaryStatistics statistics = Arrays.stream(lst).summaryStatistics();
         return lst.length == 0 ? 0 : statistics.getMax() - statistics.getMin();
     }

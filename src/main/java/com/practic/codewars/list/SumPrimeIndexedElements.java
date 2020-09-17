@@ -10,10 +10,10 @@ import java.util.stream.LongStream;
  */
 public class SumPrimeIndexedElements {
 
-        public int solve(int [] arr){
-
+    public int solve(int[] arr) {
         boolean flag;
         int sum = 0;
+
         for (int index = 2; index < arr.length; index++) {
             flag = primeIndex(index);
             if (flag) {
@@ -24,6 +24,6 @@ public class SumPrimeIndexedElements {
     }
 
     private boolean primeIndex(int index) {
-        return  LongStream.rangeClosed(2, index / 2).noneMatch(prime -> index % prime == 0);
+        return LongStream.rangeClosed(2, index / 2).noneMatch(prime -> index % prime == 0);
     }
 }
