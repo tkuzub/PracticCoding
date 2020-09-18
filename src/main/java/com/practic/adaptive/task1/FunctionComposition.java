@@ -1,9 +1,9 @@
 package com.practic.adaptive.task1;
 
-import java.util.function.Consumer;
 import java.util.function.IntUnaryOperator;
 
 public class FunctionComposition {
+
     IntUnaryOperator mult2 = num -> num * 2;
     IntUnaryOperator add3 = num -> num + 3;
 

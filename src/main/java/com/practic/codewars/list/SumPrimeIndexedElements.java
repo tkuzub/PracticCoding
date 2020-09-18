@@ -9,7 +9,6 @@ import java.util.stream.LongStream;
  * The first element of the array is at index 0.
  */
 public class SumPrimeIndexedElements {
-
     public int solve(int[] arr) {
         boolean flag;
         int sum = 0;

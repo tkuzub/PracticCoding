@@ -6,7 +6,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class MaxDiffTest {
-
     private MaxDiff diff;
 
     @Before

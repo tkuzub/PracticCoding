@@ -12,11 +12,13 @@ public class CWars {
     public String initials(String name){
         String[] data = name.split(" ");
         StringBuilder result = new StringBuilder();
+
         for (int index = 0; index < data.length - 1; index++) {
           result.append(data[index].substring(0, 1).toUpperCase()).append(".");
         }
         result.append(data[data.length - 1].substring(0, 1).toUpperCase());
         result.append(data[data.length - 1].substring(1));
+
         return result.toString();
     }
 }

@@ -1,6 +1,5 @@
 package com.practic.adaptive.task2;
 
-import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
 /**

@@ -16,7 +16,6 @@ import java.util.IntSummaryStatistics;
  * maxDiff([1, 2, 3, -4]); //return 7, because 3 - (-4) == 7
  */
 public class MaxDiff {
-
     public int maxDiff(int[] lst) {
         IntSummaryStatistics statistics = Arrays.stream(lst).summaryStatistics();
         return lst.length == 0 ? 0 : statistics.getMax() - statistics.getMin();
