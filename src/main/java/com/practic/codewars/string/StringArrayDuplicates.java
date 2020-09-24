@@ -10,27 +10,12 @@ dup(["kelless","keenness"]) = ["keles","kenes"].
 
 Strings will be lowercase only, no spaces. See test cases for more examples.*/
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 public class StringArrayDuplicates {
     public String[] dup(String[] arr){
-        List<String> list = new ArrayList<>();
-        List<String> resultList = new ArrayList<>();
-        for (String string : arr) {
-            removeDuplicates(list, resultList, string);
-        }
-       return resultList.toArray(String[]::new);
-    }
-
-    private void removeDuplicates(List<String> list, List<String> resultList, String string) {
-        list.clear();
-        for (int index = 0; index < string.length() - 1; index++) {
-            if (string.charAt(index) != string.charAt(index + 1)) {
-                list.add(string.substring(index, index + 1));
-            }
-        }
-        String resultString = String.join("", list);
-        resultList.add(resultString + string.substring(string.length() - 1));
+        return Arrays.stream(arr).
+                map(str -> str.replaceAll("(.)\\1{1,}", "$1")).
+                toArray(String[]::new);
     }
 }
