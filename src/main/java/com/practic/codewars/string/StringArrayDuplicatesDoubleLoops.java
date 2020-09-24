@@ -13,7 +13,7 @@ Strings will be lowercase only, no spaces. See test cases for more examples.*/
 import java.util.ArrayList;
 import java.util.List;
 
-public class StringArrayDuplicatesVarTwo {
+public class StringArrayDuplicatesDoubleLoops {
     public String[] dup(String[] arr){
         List<String> list = new ArrayList<>();
         List<String> resultList = new ArrayList<>();

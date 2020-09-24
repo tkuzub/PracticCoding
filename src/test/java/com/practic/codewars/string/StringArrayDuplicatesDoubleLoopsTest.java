@@ -5,12 +5,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 
-public class StringArrayDuplicatesVarTwoTest {
-    private StringArrayDuplicatesVarTwo duplicates;
+public class StringArrayDuplicatesDoubleLoopsTest {
+    private StringArrayDuplicatesDoubleLoops duplicates;
     
     @Before
     public void setUp() {
-        duplicates = new StringArrayDuplicatesVarTwo();
+        duplicates = new StringArrayDuplicatesDoubleLoops();
     }
 
     @Test
