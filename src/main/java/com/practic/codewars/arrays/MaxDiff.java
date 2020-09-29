@@ -1,4 +1,4 @@
-package com.practic.codewars.list;
+package com.practic.codewars.arrays;
 
 import java.util.Arrays;
 import java.util.IntSummaryStatistics;

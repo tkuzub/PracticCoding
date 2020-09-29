@@ -1,4 +1,4 @@
-package com.practic.codewars.list;
+package com.practic.codewars.arrays;
 /*
 You get an array of different numbers to sum up. But there is one problem, those numbers all have different bases.
  For example:

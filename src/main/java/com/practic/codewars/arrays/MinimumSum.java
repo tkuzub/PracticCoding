@@ -1,8 +1,6 @@
-package com.practic.codewars.list;
+package com.practic.codewars.arrays;
 
-import java.io.InputStream;
 import java.util.Arrays;
-import java.util.Set;
 import java.util.stream.IntStream;
 
 /*

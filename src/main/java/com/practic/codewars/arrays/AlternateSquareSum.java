@@ -1,4 +1,4 @@
-package com.practic.codewars.list;
+package com.practic.codewars.arrays;
 /*
 Elements at indices 0, 2, 4 are 11, 13, 15 and they are at odd positions as 11 is at position #1,
 13 is at position #3 and 15 at #5.
