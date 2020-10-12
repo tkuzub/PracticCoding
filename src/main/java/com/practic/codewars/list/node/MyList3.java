@@ -1,4 +1,4 @@
-package com.practic.codewars.list;
+package com.practic.codewars.list.node;
 
 /**
  Implement the method lastIndexOf (last_index_of in PHP), which accepts a linked list (head) and a value,

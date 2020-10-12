@@ -1,5 +1,6 @@
-package com.practic.codewars.list;
+package com.practic.codewars.list.node;
 
+import com.practic.codewars.list.node.MyList;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.practic.codewars.list;
+package com.practic.codewars.list.node;
 
 import java.util.function.Function;
 
