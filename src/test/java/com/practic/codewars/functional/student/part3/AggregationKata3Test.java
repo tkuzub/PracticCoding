@@ -7,13 +7,13 @@ import java.util.*;
 
 import static org.junit.Assert.*;
 
-public class AggregationKataTest {
+public class AggregationKata3Test {
     private Student[] students;
-    private AggregationKata kata;
+    private AggregationKata3 kata;
 
     @Before
     public void setUp() {
-        kata = new AggregationKata();
+        kata = new AggregationKata3();
         students = new Student[]{
                 new Student("Galina", 95, "Philology", Gender.FEMALE),
                 new Student("Anton", 90, "CS", Gender.MALE),

@@ -19,7 +19,7 @@ import java.util.stream.Stream;
  *
  * Have Fun!
  */
-public class AggregationKata {
+public class AggregationKata3 {
     public Map<String, List<String>> getStudentNamesByDepartment(Stream<Student> students) {
         return students.collect(Collectors.groupingBy(Student::getDepartment,
                 Collectors.mapping(Student::getName, Collectors.toList())));
