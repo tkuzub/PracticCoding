@@ -18,7 +18,6 @@ package com.practic.codewars.string;
 
 import java.util.Arrays;
 import java.util.function.Function;
-import java.util.stream.Stream;
 
 public class ConsonantValue {
     public int solve(final String s) {
