@@ -9,7 +9,7 @@ import static org.junit.Assert.assertEquals;
 
 public class BinderTest {
     @Test
-    public void testBinding() throws Exception {
+    public void testBinding() {
         Binder binder = new Binder();
         List<Integer> list = Arrays.asList(1,2,3);
         assertEquals(binder.bind(list, i -> Arrays.asList(i)), Arrays.asList(1,2,3));
