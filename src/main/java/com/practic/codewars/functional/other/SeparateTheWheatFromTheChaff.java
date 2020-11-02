@@ -3,10 +3,13 @@ Return a new sequence, such that negative numbers (chaff) come first, then posit
 In Java , you're not allowed to modify the input Array/list/Vector
 Have no fear , it is guaranteed that there will be no zeroes .!alt
 Repetition of numbers in the input sequence could occur , so duplications are included when separating.
+
 If a misplaced positive number is found in the front part of the sequence, replace it with the last misplaced negative
  number (the one found near the end of the input). The second misplaced positive number should be swapped with the second last misplaced negative number. Negative numbers found at the head (begining) of the sequence , should be kept in place .
+
 Input >> Output Examples:
 wheatFromChaff ({7, -8, 1 ,-2}) ==> return ({-2, -8, 1, 7})
+
 Explanation:
 Since 7 is a positive number , it should not be located at the beginnig so it needs to be swapped with the last
  negative number -2.
@@ -29,14 +32,16 @@ package com.practic.codewars.functional.other;
 
 public class SeparateTheWheatFromTheChaff {
     public long[] wheatFromChaff(long[] values) {
-        int endIndex = values.length - 1;
-        for (int currentIndex = 0; currentIndex < values.length - 1; currentIndex++) {
-            if (values[currentIndex] > 0) {
-                long temp = values[currentIndex];
+        long[] newArray = values.clone();
+        int endIndex = newArray.length - 1;
+
+        for (int currentIndex = 0; currentIndex < newArray.length - 1; currentIndex++) {
+            if (newArray[currentIndex] > 0) {
+                long temp = newArray[currentIndex];
                 while (currentIndex < endIndex) {
-                    if (values[endIndex] < 0) {
-                        values[currentIndex] = values[endIndex];
-                        values[endIndex] = temp;
+                    if (newArray[endIndex] < 0) {
+                        newArray[currentIndex] = newArray[endIndex];
+                        newArray[endIndex] = temp;
                         endIndex--;
                         break;
                     }
@@ -44,6 +49,6 @@ public class SeparateTheWheatFromTheChaff {
                 }
             }
         }
-        return values;
+        return newArray;
     }
 }
