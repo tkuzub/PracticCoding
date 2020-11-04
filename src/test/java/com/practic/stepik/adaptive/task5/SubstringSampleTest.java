@@ -1,4 +1,4 @@
-package com.practic.adaptive.task5;
+package com.practic.stepik.adaptive.task5;
 
 import org.junit.Before;
 import org.junit.Test;

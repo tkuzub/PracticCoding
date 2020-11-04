@@ -1,4 +1,4 @@
-package com.practic.adaptive.codingbat;
+package com.practic.stepik.adaptive.codingbat;
 
 import java.util.HashMap;
 import java.util.Map;

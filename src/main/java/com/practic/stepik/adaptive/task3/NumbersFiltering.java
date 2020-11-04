@@ -1,4 +1,4 @@
-package com.practic.adaptive.task3;
+package com.practic.stepik.adaptive.task3;
 
 import java.util.stream.IntStream;
 

@@ -1,4 +1,4 @@
-package com.practic.adaptive.task1;
+package com.practic.stepik.adaptive.task1;
 
 import java.util.function.IntUnaryOperator;
 

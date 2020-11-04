@@ -1,4 +1,4 @@
-package com.practic.adaptive.task2;
+package com.practic.stepik.adaptive.task2;
 
 import java.util.stream.LongStream;
 
