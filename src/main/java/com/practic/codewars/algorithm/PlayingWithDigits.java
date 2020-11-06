@@ -46,10 +46,8 @@ public class PlayingWithDigits {
             sum += temp;
         }
 
-        if (n > sum) {
-            return -1;
-        } else {
-            return sum / n;
-        }
+        long k = sum / n;
+
+        return n * k == sum ? k : -1;
     }
 }
