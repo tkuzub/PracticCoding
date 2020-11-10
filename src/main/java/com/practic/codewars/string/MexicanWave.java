@@ -21,29 +21,16 @@ wave("hello") => []string{"Hello", "hEllo", "heLlo", "helLo", "hellO"}*/
 
 package com.practic.codewars.string;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MexicanWave {
     public static String[] wave(String str) {
-        int count = 0;
-        List<String> list = new LinkedList<>();
-        String[] split = str.split("");
-        for (int index = 0; index < split.length; index++) {
-            if (split[index].isEmpty()) {
-                count = 1;
-                continue;
-            }
-            if (count == 0 || count == 1) {
-                list.add(split[count].toUpperCase() + str.substring(count + 1));
-                count++;
-            } else if (count == str.trim().length() - 1) {
-                list.add(str.substring(split.length - 1) + split[index].toUpperCase());
-                count++;
-            } else {
-                list.add(str.substring(0, index - 1) + split[index].toUpperCase() + str.substring(index + 1));
-                count++;
-            }
+        List<String> list = new ArrayList<>();
+        for (int index = 0; index < str.length(); index++) {
+            char ch = str.charAt(index);
+            if (ch == ' ') continue;
+            list.add(str.substring(0,index) + Character.toUpperCase(ch) + str.substring(index+1));
         }
         return list.toArray(String[]::new);
     }
