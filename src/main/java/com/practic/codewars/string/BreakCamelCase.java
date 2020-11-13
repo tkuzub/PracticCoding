@@ -18,5 +18,4 @@ public class BreakCamelCase {
         }
         return result.toString();
     }
-    /*return input.replaceAll("([A-Z])", " $1");*/
 }

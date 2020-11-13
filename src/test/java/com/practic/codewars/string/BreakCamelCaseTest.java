@@ -10,7 +10,7 @@ public class BreakCamelCaseTest {
 
     @Before
     public void setUp() {
-        camelCase = new BreakCamelCase();
+        camelCase = new BreakCamelCaseStream();
     }
 
     @Test
