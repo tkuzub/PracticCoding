@@ -18,6 +18,15 @@ package com.practic.codewars.string;
 
 public class SunChars {
     public boolean compare(String s1, String s2) {
-        return s1.chars().map(Character::toLowerCase).sum() == s2.chars().map(Character::toLowerCase).sum();
+
+        if (s1 == null || !s1.matches("[a-zA-z]+")) {
+             s1 = "";
+        }
+
+        if (s2 == null || !s2.matches("[a-zA-z]+")) {
+            s2 = "";
+        }
+
+        return s1.chars().map(Character::toUpperCase).sum() == s2.chars().map(Character::toUpperCase).sum();
     }
 }

@@ -18,5 +18,7 @@ public class SunCharsTest {
         assertTrue(sunChars.compare("AD", "BC"));
         assertFalse(sunChars.compare("AD", "DD"));
         assertTrue(sunChars.compare("gf", "FG"));
+        assertTrue(sunChars.compare("zz1", ""));
+        assertTrue(sunChars.compare("ZzZz", "ffPFF"));
     }
 }
