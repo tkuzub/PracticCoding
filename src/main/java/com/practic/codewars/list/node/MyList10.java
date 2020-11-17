@@ -38,19 +38,12 @@ public class MyList10 {
                 return listA;
             }
 
-            Node curr = listA;
-            Node temp = listB;
+            Node temp = listA;
 
-            while (curr != null) {
-                if (curr.next == null) {
-                    while (temp != null) {
-                        curr.next = new Node(temp.data);
-                        curr = curr.next;
-                        temp = temp.next;
-                    }
-                }
-                curr = curr.next;
+            while (temp.next != null) {
+                temp = temp.next;
             }
+            temp.next = listB;
             return listA;
         }
     }
