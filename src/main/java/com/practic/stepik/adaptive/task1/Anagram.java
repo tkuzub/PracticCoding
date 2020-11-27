@@ -31,24 +31,15 @@ False*/
 
 package com.practic.stepik.adaptive.task1;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.UncheckedIOException;
 import java.util.Arrays;
+import java.util.Scanner;
 import java.util.function.Supplier;
 
 public class Anagram {
     public static void main(String[] args) {
-        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        Scanner in = new Scanner(System.in);
 
-        Supplier<int[]> f = () -> {
-            try {
-                return in.readLine().toLowerCase().chars().sorted().toArray();
-            } catch (IOException e) {
-                throw new UncheckedIOException(e);
-            }
-        };
+        Supplier<int[]> f = () -> in.nextLine().toLowerCase().chars().sorted().toArray();
 
         System.out.println(Arrays.equals(f.get(), f.get()) ? "True" : "False");
     }
