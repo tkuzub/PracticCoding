@@ -38,12 +38,9 @@ public class Anagram {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        String[] one = in.nextLine().toLowerCase().split("");
-        String[] two = in.nextLine().toLowerCase().split("");
-        Arrays.sort(one);
-        Arrays.sort(two);
+        int[] one = in.nextLine().toLowerCase().chars().sorted().toArray();
+        int[] two = in.nextLine().toLowerCase().chars().sorted().toArray();
 
-        boolean result = Arrays.equals(one, two);
-        System.out.println(result ? "True" : "False");
+        System.out.println(Arrays.equals(one, two) ? "True" : "False");
     }
 }
