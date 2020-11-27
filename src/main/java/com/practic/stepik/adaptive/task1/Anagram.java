@@ -38,19 +38,12 @@ public class Anagram {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        String firstWord = in.nextLine();
-        String secondWord = in.nextLine();
-
-         String[] one = firstWord.chars().
-                mapToObj(value -> String.valueOf((char) value)).
-                map(String::toLowerCase).sorted().toArray(String[]::new);
-
-         String[] two = secondWord.chars().
-                mapToObj(value -> String.valueOf((char) value)).
-                map(String::toLowerCase).sorted().toArray(String[]::new);
+        String[] one = in.nextLine().toLowerCase().split("");
+        String[] two = in.nextLine().toLowerCase().split("");
+        Arrays.sort(one);
+        Arrays.sort(two);
 
         boolean result = Arrays.equals(one, two);
-
         System.out.println(result ? "True" : "False");
     }
 }
