@@ -3,23 +3,18 @@ uppercase, and vice versa. Characters that are not Latin ones need to stay uncha
 package com.practic.stepik.adaptive.task1;
 
 import java.util.Scanner;
+import java.util.function.Predicate;
+import java.util.function.UnaryOperator;
 
 public class ChangeRegister {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        String result;
-        String ch = in.nextLine();
+        String str = in.nextLine();
 
-        if (ch.matches("\\p{IsLatin}")) {
-            if (Character.isUpperCase(ch.charAt(0))) {
-                result = ch.toLowerCase();
-            } else {
-                result = ch.toUpperCase();
-            }
-        } else {
-            result = ch;
-        }
+        Predicate<String> f1 = s -> s.matches("\\p{IsLatin}");
+        UnaryOperator<String> f2 = s -> (Character.isUpperCase(s.charAt(0)) ? s.toLowerCase() : s.toUpperCase());
 
-        System.out.println(result);
+        System.out.println(f1.test(str) ? f2.apply(str) : str);
     }
 }
+
