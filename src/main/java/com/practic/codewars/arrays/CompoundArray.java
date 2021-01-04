@@ -6,28 +6,13 @@ Output - {1,9,2,8,3,7,4,6,5,6}*/
 
 package com.practic.codewars.arrays;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-
 public class CompoundArray {
     public int[] compoundArray(int[] a, int[] b) {
-        List<Integer> data = new ArrayList<>();
-
-        int i;
-        for (i = 0; i < a.length; i++) {
-            data.add(a[i]);
-            IntStream.range(i, b.length).findFirst().ifPresent(j -> data.add(b[j]));
+        int[] result = new int[a.length + b.length];
+        for (int i = 0, j = 0; i < result.length; j++) {
+            if (j < a.length) result[i++] = a[j];
+            if (j < b.length) result[i++] = b[j];
         }
-
-        if (a.length < b.length) {
-            List<Integer> dataList = IntStream.
-                    range(i, b.length).mapToObj(value -> b[value]).
-                    collect(Collectors.toCollection(ArrayList::new));
-            data.addAll(dataList);
-        }
-
-        return data.stream().mapToInt(Integer::intValue).toArray();
+        return result;
     }
 }
