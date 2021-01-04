@@ -8,20 +8,26 @@ package com.practic.codewars.arrays;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class CompoundArray {
-    public int[] compoundArray(int[] a, int[] b){
+    public int[] compoundArray(int[] a, int[] b) {
         List<Integer> data = new ArrayList<>();
 
-
-        return getResult(data);
-    }
-
-    private int[] getResult(List<Integer> data) {
-        int[] result = new int[data.size()];
-        for (int i = 0; i < result.length; i++) {
-            result[i] = data.get(i);
+        int i;
+        for (i = 0; i < a.length; i++) {
+            data.add(a[i]);
+            IntStream.range(i, b.length).findFirst().ifPresent(j -> data.add(b[j]));
         }
-        return result;
+
+        if (a.length < b.length) {
+            List<Integer> dataList = IntStream.
+                    range(i, b.length).mapToObj(value -> b[value]).
+                    collect(Collectors.toCollection(ArrayList::new));
+            data.addAll(dataList);
+        }
+
+        return data.stream().mapToInt(Integer::intValue).toArray();
     }
 }
