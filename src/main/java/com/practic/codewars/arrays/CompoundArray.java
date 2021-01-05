@@ -9,9 +9,11 @@ package com.practic.codewars.arrays;
 public class CompoundArray {
     public int[] compoundArray(int[] a, int[] b) {
         int[] result = new int[a.length + b.length];
-        for (int i = 0, j = 0; i < result.length; j++) {
-            if (j < a.length) result[i++] = a[j];
-            if (j < b.length) result[i++] = b[j];
+        int index = 0;
+
+        for (int j = 0; index < result.length; j++) {
+            if (j < a.length) result[index++] = a[j];
+            if (j < b.length) result[index++] = b[j];
         }
         return result;
     }
