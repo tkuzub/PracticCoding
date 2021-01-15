@@ -8,11 +8,11 @@ import java.util.Arrays;
 import static org.junit.Assert.*;
 
 public class StringSplitTest {
-    private StringSplit stringSplit;
+    private StringSplitVarLoop stringSplit;
 
     @Before
     public void setUp() {
-        stringSplit = new StringSplit();
+        stringSplit = new StringSplitVarLoop();
     }
 
     @Test
