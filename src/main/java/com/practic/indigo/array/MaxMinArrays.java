@@ -9,9 +9,14 @@ public class MaxMinArrays {
 
         Arrays.sort(arr);
 
-        for (int i = 0; i < arr.length / 2; i++) {
+        int i;
+        for (i = 0; i < arr.length / 2; i++) {
             result[index++] = arr[arr.length - i - 1];
             result[index++] = arr[i];
+        }
+
+        if (arr.length % 2 == 1) {
+            result[index] = arr[i];
         }
         return result;
     }
