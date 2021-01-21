@@ -10,7 +10,7 @@ public class MinimizeSumOfArrayTest {
 
     @Before
     public void setUp() {
-        sum = new MinimizeSumOfArray();
+        sum = new MinimizeSumOfArray2();
     }
 
     @Test
