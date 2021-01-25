@@ -10,7 +10,7 @@ public class FirstNonConsecutiveTest {
 
     @Before
     public void setUp() {
-        firstNonConsecutive = new FirstNonConsecutive();
+        firstNonConsecutive = new FirstNonConsecutiveStream();
     }
 
     @Test
