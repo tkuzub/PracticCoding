@@ -21,9 +21,7 @@ public class SumDifferentArray {
         int sum = 0;
 
         int[] array = IntStream.of(arr).boxed().sorted(Collections.reverseOrder()).mapToInt(i -> i).toArray();
-        for (int index = 0; index < array.length - 1; index++) {
-            sum += array[index] - array[index + 1];
-        }
-        return sum;
+
+        return IntStream.range(0, array.length - 1).map(i -> array[i] - array[i + 1]).sum();
     }
 }
