@@ -1,5 +1,8 @@
 package com.practic.indigo.array;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Convert number to reversed array of digits
  * Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
@@ -9,6 +12,13 @@ package com.practic.indigo.array;
  */
 public class ConvertNumber {
     public int[] digitize(long n) {
-        return null;
+        List<Long> listNumber = new ArrayList<>();
+        while (n != 0) {
+            long digit = n % 10;
+            listNumber.add(digit);
+            n /= 10;
+        }
+
+        return listNumber.stream().mapToInt(Long::intValue).toArray();
     }
 }
