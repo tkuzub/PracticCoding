@@ -30,12 +30,3 @@ public class PowersNumber {
         }
     }
 }
-
-
-/*canner scan = new Scanner(System.in);
-
-        double n = scan.nextDouble();
-        double k = Math.log(n)/Math.log(2);
-        int s = (int)k;
-
-        Stream.iterate(1, x->2*x).limit(++s).forEach(System.out::println);*/

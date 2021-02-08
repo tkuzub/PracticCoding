@@ -31,10 +31,3 @@ public class NumberReversing {
         System.out.println(result);
     }
 }
-
-
-/*System.out.println(new StringBuilder((new java.util.Scanner(System.in)).next()).reverse().toString());*/
-
-/*Scanner scan = new Scanner(System.in);
-        int n = scan.nextInt();
-        System.out.println(n / 100 + ((n / 10) % 10) * 10 + (n % 10) * 100);*/
