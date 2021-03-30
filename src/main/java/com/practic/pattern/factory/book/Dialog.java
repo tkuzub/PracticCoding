@@ -1,4 +1,4 @@
-package com.practic.pattern.factory.var2;
+package com.practic.pattern.factory.book;
 
 public abstract class Dialog {
     public void renderWindow() {

@@ -1,8 +1,7 @@
-package com.practic.pattern.factory.var2;
+package com.practic.pattern.factory.book;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 public class WindowsButton implements Button {
 
     JPanel panel = new JPanel();

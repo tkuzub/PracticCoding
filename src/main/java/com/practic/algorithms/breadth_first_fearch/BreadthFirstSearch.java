@@ -1,4 +1,4 @@
-package com.practic.stepik.algorithms.breadth_first_fearch;
+package com.practic.algorithms.breadth_first_fearch;
 
 import java.util.*;
 

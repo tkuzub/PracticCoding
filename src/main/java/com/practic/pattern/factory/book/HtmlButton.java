@@ -1,4 +1,4 @@
-package com.practic.pattern.factory.var2;
+package com.practic.pattern.factory.book;
 
 public class HtmlButton implements Button {
 
