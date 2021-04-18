@@ -2,7 +2,8 @@ package com.practic.pattern.mvc.var1;
 
 public class MVCDemo {
     public static void main(String[] args) {
-
+        Controller controller = new Controller();
+        controller.execute();
     }
 }
 
