@@ -10,8 +10,12 @@ import org.apache.poi.ss.util.CellReference;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.SimpleDateFormat;
 
 public class JavaExcelGetDataCell {
+
+    private static SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd");
+
     public static void main(String[] args) {
         DataFormatter formatter = new DataFormatter();
         HSSFWorkbook wb = null;
@@ -40,7 +44,7 @@ public class JavaExcelGetDataCell {
                 break;
             case NUMERIC:
                 if (DateUtil.isCellDateFormatted(cell)) {
-                    result = String.valueOf(cell.getDateCellValue());
+                    result = sdf.format(cell.getDateCellValue());
                 } else {
                     result = String.valueOf(cell.getNumericCellValue());
                 }
