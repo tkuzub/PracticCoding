@@ -11,15 +11,23 @@ import java.io.IOException;
 public class JavaExcelApp {
     public static void main(String[] args) {
         Workbook wb = new HSSFWorkbook();
-        Sheet sheet = wb.createSheet("mySheet");
+        Sheet sheet1 = wb.createSheet("book");
+        Sheet sheet2 = wb.createSheet("author");
+        Sheet sheet3 = wb.createSheet("publisher");
 
-        String path = "src/main/resources/my.xls";
-        File file = new File(path);
+        File file = new File("src/main/resources/my.xls");
+
+        if (!file.exists()) {
+            createNewExcelFile(wb, file);
+        }
+//        file.deleteOnExit();
+    }
+
+    private static void createNewExcelFile(Workbook wb, File file) {
         try (FileOutputStream fos = new FileOutputStream(file)) {
             wb.write(fos);
         } catch (IOException e) {
             e.printStackTrace();
         }
-//        file.deleteOnExit();
     }
 }
