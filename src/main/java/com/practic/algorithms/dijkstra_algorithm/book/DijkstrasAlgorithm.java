@@ -1,4 +1,4 @@
-package com.practic.algorithms.dijkstra_algorithm.var1;
+package com.practic.algorithms.dijkstra_algorithm.book;
 
 import java.util.ArrayList;
 import java.util.HashMap;
