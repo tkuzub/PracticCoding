@@ -8,15 +8,13 @@ public abstract class Duck {
     public Duck() {
     }
 
-    public Duck(FLyBehavior fLyBehavior, QuackBehavior quackBehavior) {
-        this.fLyBehavior = fLyBehavior;
-        this.quackBehavior = quackBehavior;
-    }
-
     public abstract void print();
 
-    public void execute() {
-        fLyBehavior.fly();
+   public void performFly() {
+       fLyBehavior.fly();
+   }
+
+    public void performQuack() {
         quackBehavior.quack();
     }
 

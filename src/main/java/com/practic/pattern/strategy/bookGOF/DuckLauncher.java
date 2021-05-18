@@ -3,12 +3,16 @@ package com.practic.pattern.strategy.bookGOF;
 public class DuckLauncher {
     public static void main(String[] args) {
 
-        Duck readHeadDuck = new ReadHeadDuck(new FlyWithWings(), new Quack());
-        readHeadDuck.execute();
+        Duck readHeadDuck = new ReadHeadDuck();
+        readHeadDuck.setFLyBehavior(new FlyWithWings());
+        readHeadDuck.setQuackBehavior(new Quack());
 
-        System.out.println("=============");
+        readHeadDuck.performFly();
+        readHeadDuck.performQuack();
+
+        System.out.println("=================");
 
         readHeadDuck.setFLyBehavior(new FlyLikeRocket());
-        readHeadDuck.execute();
+        readHeadDuck.performFly();
     }
 }
