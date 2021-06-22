@@ -1,5 +1,6 @@
 package com.practic.different.repeat.list.node;
 
+import java.lang.module.FindException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,33 +13,21 @@ public class CircularList<T> {
         Node<T> prev;
         T t;
 
-        public T getT() {
-            return t;
-        }
+
     }
 
 
     public CircularList(final T... elements) {
-        List<T> list = Arrays.stream(elements).collect(Collectors.toList());
         int index = 0;
+        head = new Node<>();
+        head.t = elements[index++];
 
-        
-        while (index != (list.size() - 1)) {
-            if (head == null) {
-                head = new Node<>();
-                head.t = list.get(index++);
-                head.prev = head;
-            }
+        Node<T> curr = head;
 
-            Node<T> curr = head;
-            while (curr != null) {
-                if (curr.next == null) {
-                    curr.next = new Node<>();
-                    curr.next.t = list.get(index++);
-//                    curr.prev = curr;
-                }
-                curr = curr.next;
-            }
+        for (int i = index; i < elements.length; i++) {
+            curr.next = new Node<>();
+            curr.next.t = elements[i];
+            curr = curr.next;
         }
     }
 
